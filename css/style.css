@@ -619,6 +619,10 @@ header.scrolled .logo {
 	text-transform: uppercase;
 }
 
+.filter-btn.mixitup-control-active {
+	color: var(--main-color-1);
+}
+
 .portfolio-gallery {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -704,6 +708,7 @@ header.scrolled .logo {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transform: translateY(15px);
 	cursor: pointer;
 	opacity: 0;
 	transition: 0.3s;
@@ -711,6 +716,12 @@ header.scrolled .logo {
 
 .prt-icon:hover {
 	background-color: var(--main-color-dark-2);
+}
+
+.prt-img:hover .prt-icon {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: 0.3s var(--i);
 }
 
 /* --------------- Testimonials Section Styling --------------- */
