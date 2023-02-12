@@ -135,6 +135,17 @@ function changeImage(index) {
 }
 
 /* --------------- Modal Pop Up Animation Animation --------------- */
+const swiper = new Swiper(".swiper", {
+	loop: true,
+	speed: 1000,
+	autoplay: true,
+
+	// If we need pagination
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+});
 
 /* --------------- Change Active Link On Scroll --------------- */
 
