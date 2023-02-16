@@ -12,7 +12,10 @@ const images = document.querySelectorAll(".images img");
 const prev_btn = document.querySelector(".prev-btn");
 const next_btn = document.querySelector(".next-btn");
 
+const links = document.querySelectorAll(".nav-link");
+
 window.addEventListener("scroll", () => {
+	activeLink();
 	if (!skillsPlayed) skillsCounter();
 });
 
@@ -148,6 +151,24 @@ const swiper = new Swiper(".swiper", {
 });
 
 /* --------------- Change Active Link On Scroll --------------- */
+function activeLink() {
+	let sections = document.querySelectorAll("section[id]");
+	let passedSections = Array.from(sections)
+		.map((sct, i) => {
+			return {
+				y: sct.getBoundingClientRect().top - header.offsetHeight,
+				id: i,
+			};
+		})
+		.filter((sct) => sct.y <= 0);
+
+	let currSecId = passedSections.at(-1).id;
+
+	links.forEach((l) => l.classList.remove("active"));
+	links[currSecId].classList.add("active");
+}
+
+activeLink();
 
 /* --------------- Change Page Theme --------------- */
 

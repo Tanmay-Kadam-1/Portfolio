@@ -13,6 +13,10 @@
 	--section-padding: 7rem;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	--bg-color: hsl(var(--hue-1), 100%, 97%);
 	--bg-color-1: hsl(var(--hue-1), 100%, 95.5%);
@@ -262,11 +266,13 @@ header.scrolled .logo {
 	transition: 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
 	color: var(--heading-color);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
 	width: 100%;
 	opacity: 0.2;
 }
