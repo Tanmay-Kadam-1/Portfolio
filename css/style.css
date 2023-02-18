@@ -37,6 +37,30 @@ body.dark {
 	--text-color: hsl(var(--hue-1), 14%, 51%);
 }
 
+body.dark .st1 {
+	fill: hsl(var(--hue-1), 18%, 29%);
+	box-shadow: 2px 2px solid white;
+}
+body.dark .shape.square {
+	opacity: 0.2;
+}
+
+body.dark .toggle-btn {
+	background-color: var(--bg-color-3);
+}
+body.dark .toggle-btn:hover {
+	background-color: brightness(110%);
+}
+
+body.dark .nav-link:hover::after,
+.nav-link.active::after {
+	opacity: 0.6;
+}
+
+body.dark .form-input:hover {
+	filter: brightness(110%);
+}
+
 /* --------------- General Styles --------------- */
 
 *,
@@ -51,6 +75,7 @@ body {
 	font-family: "Poppins", sans-serif;
 	overflow-x: hidden;
 	background-color: var(--bg-color);
+	transition: 1s background-color;
 }
 
 body.stopScrolling {
@@ -101,6 +126,7 @@ ul {
 	padding: 0.13rem 0.75rem;
 	margin-bottom: 1rem;
 	font-weight: 500;
+	transition: 1s color;
 }
 
 .heading {
@@ -194,6 +220,7 @@ ul {
 
 .square {
 	width: 70px;
+	transition: 1s opacity;
 }
 
 /* --------------- Navbar Styling --------------- */
@@ -407,6 +434,7 @@ header.scrolled .logo {
 	justify-content: center;
 	cursor: pointer;
 	transition: 0.5 transform;
+	transition: 1s background-color;
 }
 
 .about-card:nth-child(1) {
@@ -637,6 +665,7 @@ header.scrolled .logo {
 	margin-left: 1.3rem;
 	font-family: inherit;
 	text-transform: uppercase;
+	transition: 1s color;
 }
 
 .filter-btn.mixitup-control-active {
@@ -656,8 +685,8 @@ header.scrolled .logo {
 	height: 270px;
 	display: grid;
 	grid-template-rows: 1fr auto;
+	transition: 1s color;
 }
-
 .prt-img {
 	position: relative;
 	overflow: hidden;
@@ -676,6 +705,7 @@ header.scrolled .logo {
 	padding: 1.1rem 1.6rem;
 	display: flex;
 	justify-content: space-between;
+	transition: 1s color;
 }
 
 .prt-desc h3 {
@@ -837,6 +867,7 @@ header.scrolled .logo {
 	background-color: var(--bg-color-2);
 	border-radius: 15px;
 	padding: 4rem 0rem 2.5rem;
+	transition: 1s background-color;
 }
 
 .swiper-pagination-bullet {
