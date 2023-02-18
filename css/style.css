@@ -1005,6 +1005,7 @@ header.scrolled .logo {
 	padding: 3.5rem 3rem;
 	display: flex;
 	flex-direction: column;
+	transition: 1s background-color;
 }
 
 .contact-form h3 {
