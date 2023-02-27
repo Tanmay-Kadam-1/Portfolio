@@ -241,7 +241,7 @@ header {
 }
 
 header.scrolled {
-	background-color: var(--bg-color-transparent);
+	/* background-color: var(--bg-color-transparent); */
 	box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
 	transition: 0.3s;
 }
@@ -263,7 +263,7 @@ header.scrolled .logo {
 }
 
 .links {
-	/* flex: 1; */
+	flex: 1;
 	display: flex;
 	justify-content: space-between;
 }
@@ -728,7 +728,7 @@ body.open .hamburger .bar:last-child {
 	border-radius: 15px;
 	overflow: hidden;
 	background-color: var(--bg-color-2);
-	height: 270px;
+	height: 370px;
 	display: grid;
 	grid-template-rows: 1fr auto;
 	transition: 1s color;
@@ -759,6 +759,26 @@ body.open .hamburger .bar:last-child {
 	color: var(--heading-color);
 	font-weight: 600;
 	text-transform: capitalize;
+}
+
+.prt-info {
+	margin: 0.5rem 1rem 1.3rem 1.6rem;
+	font-size: 0.8rem;
+	color: var(--text-color);
+}
+.key-tech {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 1.6rem;
+}
+.key-tech button {
+	font-size: 0.7rem;
+	padding: 4px 10px;
+	border-radius: 5px;
+	margin: 0 1rem 1rem 0rem;
+	background-color: var(--bg-color);
+	color: var(--heading-color);
+	border: none;
 }
 
 .btn.secondary-btn.sm {
@@ -1483,4 +1503,72 @@ footer .social-media {
 /* --------------- 500px Screens --------------- */
 
 @media (max-width: 500px) {
+	.container {
+		padding: 0 1.4rem;
+		margin: 0;
+	}
+	.showcase-area .square {
+		height: 30px;
+		width: 30px;
+	}
+	.showcase-area .container {
+		row-gap: 4.5rem;
+	}
+	.showcase-area .heading {
+		font-size: 2.4rem;
+	}
+	.skills-box {
+		padding: 3rem 2.5rem;
+	}
+	.skills-wrap {
+		grid-template-columns: 1fr;
+		row-gap: 1.5;
+	}
+	.skills-images {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 3rem;
+	}
+	.portfolio-header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.filter-btns {
+		margin-top: 2rem;
+		font-size: 1.5rem;
+	}
+	.portfolio .slider-wrap {
+		width: calc(100% - 2rem);
+		grid-template-columns: 50px 1fr 50px;
+	}
+	.images {
+		grid-column: 1/4;
+		grid-row: 1/2;
+	}
+	.prev-btn {
+		grid-column: 1/2;
+		grid-row: 1/2;
+		z-index: 1;
+		color: #333;
+	}
+	.next-btn {
+		grid-column: 3/4;
+		grid-row: 1/2;
+		z-index: 1;
+		color: #333;
+	}
+	.contact-form p {
+		font-size: 1.2rem;
+	}
+	footer {
+		padding: var(--section-padding) 0 1rem;
+	}
+	footer .text {
+		order: 3;
+		flex-basis: 100%;
+		text-align: center;
+		margin: 2rem 0 0 1rem;
+		padding: 0;
+	}
 }
